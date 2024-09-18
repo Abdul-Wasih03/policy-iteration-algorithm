@@ -67,7 +67,7 @@ def improve_policy(π, v):
 ```
 - The policy iteration algorithm is guaranteed to converge to the optimal policy in a finite number of iterations. However, the number of iterations required can be large in practice.
 
-## POLICY IMPROVEMENT FUNCTION
+## Policy Improvement Function
 
 ```py
 def policy_improvement(V, P, gamma=0.9):
@@ -79,7 +79,7 @@ def policy_improvement(V, P, gamma=0.9):
     new_policy = lambda s: {s: a for s, a in enumerate(np.argmax(Q, axis=1))}[s]
     return new_policy
 ```
-## POLICY ITERATION FUNCTION
+## Policy Iteration Function
 ```python
 def policy_iteration(P, gamma=0.9, theta=1e-10):
     random_actions = np.random.choice(tuple(P[0].keys()), len(P))
@@ -103,7 +103,7 @@ def policy_iteration(P, gamma=0.9, theta=1e-10):
 
 
 
-## Success rate for The Optimal Policy:
+## Success Rate for The Optimal Policy:
 
 ![3](https://github.com/user-attachments/assets/fba57690-e4d4-4b07-8c4e-7f0a539e567e)
 
